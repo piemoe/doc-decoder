@@ -6,6 +6,21 @@ This table has an x-coordinate as a positive integer, a single ASCII character l
 The program is designed to take a shared link to the Google Doc, scrape the document for its table, turn the table into a dict of coords:chars, and then print a grid of the characters (or a space when none is provided).
 With ideal input, this program can print ASCII art that's stored in a table. The specific use for this project was to display the block characters of a hidden message.
 
+<u>What could be done better?</u>
+First off, there is zero work in catching errors.
+<ul>
+  <li>The code will break if it receives a doc with a table in any format other than [int], [char], [int].</li>
+  <li>I have no idea what'll happen if the table contains extra columns. It may still work, it may break.</li>
+  <li>What happens if there are multiple tables in the doc?</li>
+  <li>Proper error handling can easily be put in place to catch errors in the link.</li>
+  <li>What happens if there are multiple characters in one coord? If both are printed, this won't be an error but it'll misalign the print.</li>
+</ul>
+Now, some features that'll make the program "feel" more complete.
+<ul>
+  <li>An input loop for users to provide a link. Loop back to input when one of the above errors kicks back.</li>
+  <li>Some better handling of the loop - it's supposed to handle arbitrarily-large grids, but eventually the program will be unweildy or impossible to execute if (1000001, 2^128+1) is assigned.</li>
+</ul>
+
 ## table_maker
 <i>Take the document and make it useable.</i>
 
