@@ -13,3 +13,10 @@ This function takes input in the form of the link to the Google Doc.
 It looks in the document for a table, and assigns that table to a placeholder to be worked.
 The table placeholder is parsed such that each row is turned into an array, and then each row array is put into the return's array.
 After this function, the table is broken down like [[1, █, 1], [2, █, 1],...]
+
+
+## crypto_sorter
+<i>Sort the array.</i>
+
+This function takes an array as input and returns the array sorted in ascending order.
+Note: This function is never called in the final main() call - it's entirely redundant and doesn't appear useful in execution or efficiency.
