@@ -20,3 +20,10 @@ After this function, the table is broken down like [[1, █, 1], [2, █, 1],...
 
 This function takes an array as input and returns the array sorted in ascending order.
 Note: This function is never called in the final main() call - it's entirely redundant and doesn't appear useful in execution or efficiency.
+
+## message_printer
+<i>Print the final art/message.</i>
+
+This function first removes the header from the table and then determines the max-size of the grid.
+The function then creates the dict of (x,y):char to be printed.
+The function then goes through each row to be printed and prints the specified character per row. If the printhead is on a coordinate with no assigned char in the dict, it will print a space.
